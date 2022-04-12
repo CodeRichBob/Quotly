@@ -1,0 +1,107 @@
+<form
+  (ngSubmit)="submitQuote(quoteForm); quoteForm.resetForm({})"
+  #quoteForm="ngForm"
+>
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5
+            style="font-weight: bold"
+            class="modal-title"
+            id="exampleModalLabel"
+          >
+            New Quote
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Quote</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="textHelp"
+              [(ngModel)]="newQuote.proverb"
+              name="name"
+              #quote="ngModel"
+              required
+              placeholder="Your Quote please"
+            />
+            <div
+              [hidden]="quote.valid || quote.pristine"
+              class="alert alert-warning"
+            >
+              <p>Quote is required</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              [(ngModel)]="newQuote.user"
+              name="name"
+              #name="ngModel"
+              required
+              placeholder="Your name"
+            />
+            <div
+              [hidden]="name.valid || name.pristine"
+              class="alert alert-warning"
+            >
+              <p>Please fill in your name</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Author</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              [(ngModel)]="newQuote.author"
+              name="name"
+              #author="ngModel"
+              required
+              placeholder="Author of the quote"
+            />
+            <div
+              [hidden]="author.valid || author.pristine"
+              class="alert alert-warning"
+            >
+              <p>
+                Author name is required, fill in
+                <strong><em>unknown</em></strong> if author is not known
+              </p>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-warning">Submit Quote</button>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

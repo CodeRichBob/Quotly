@@ -1,0 +1,28 @@
+<app-header-component></app-header-component>
+<app-navbar-component></app-navbar-component>
+<div class="p"><p>Playground for Wit and Wisdom</p></div>
+<div
+  class="
+    cardSect
+    row row-cols-lg-2 row-cols-md-2 row-cols-md-1
+    container-fluid
+    gy-3
+  "
+>
+  <div class="col" *ngFor="let quote of arrayQuotes; let i = index">
+    <div class="quoteCard">
+      <div class="quote">
+        <p>{{ quote.proverb }}</p>
+      </div>
+      <app-quote-details-component
+        [quoteDC]="quote"
+        (del)="deleteQuote($event, i)"
+        (newLike)="addLike($event, i)"
+        (newDislike)="addDislike($event, i)"
+      ></app-quote-details-component>
+    </div>
+  </div>
+</div>
+
+<app-modal (addQuote)="newQuote($event)"></app-modal>
+<app-footer-component></app-footer-component>

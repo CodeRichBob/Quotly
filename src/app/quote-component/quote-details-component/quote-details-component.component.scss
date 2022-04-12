@@ -1,0 +1,26 @@
+.quote-details {
+  padding: 20px;
+  .credits {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 5px;
+    color: #0C081B;
+  }
+  .time-interaction {
+    .interaction {
+      flex: 1;
+      justify-content: space-around;
+    }
+    .time-posted {
+      flex: 1;
+      text-align: right;
+    }
+  }
+  .details-main {
+    justify-content: space-between;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}

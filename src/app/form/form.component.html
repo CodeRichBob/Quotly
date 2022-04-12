@@ -1,0 +1,57 @@
+<form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Quote</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="textHelp"
+      [(ngModel)]="newQuote.proverb"
+      name="name"
+      #quote="ngModel"
+      required
+      placeholder="Your Qoute goes here"
+    />
+    <div [hidden]="quote.valid || quote.pristine" class="alert alert-warning">
+      <p>Quote is required!</p>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      [(ngModel)]="newQuote.user"
+      name="name"
+      #name="ngModel"
+      required
+      placeholder="Your name"
+    />
+    <div [hidden]="name.valid || name.pristine" class="alert alert-warning">
+      <p>Please fill in your name!</p>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Author</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      [(ngModel)]="newQuote.author"
+      name="name"
+      #author="ngModel"
+      required
+      placeholder="Author of the quote"
+    />
+    <div [hidden]="author.valid || author.pristine" class="alert alert-warning">
+      <p>
+        Author name is required, fill in
+        <strong><em>unknown</em></strong> if author is not known
+      </p>
+    </div>
+  </div>
+  <button class="btn btn-warning">Submit Quote</button>
+</form>

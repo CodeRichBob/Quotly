@@ -1,0 +1,32 @@
+<div class="quote-details">
+  <div class="details-main d-flex">
+    <div class="credits">
+      <p>Author: {{ quoteDC.author }}</p>
+      <p>Posted By: {{ quoteDC.user }}</p>
+    </div>
+    <div class="delete">
+      <button (click)="quoteDelete(true)">
+        <img src="assets/img/trash-2.svg" alt="delete" />
+      </button>
+    </div>
+  </div>
+  <div class="time-interaction d-flex">
+    <div class="interaction d-flex">
+      <div class="likes">
+        <button (click)="addLike(true)">
+          <img src="assets/img/heart.svg" alt="like" />
+        </button>
+        {{ quoteDC.likes }}
+      </div>
+      <div class="dislikes">
+        <button (click)="addDislike(true)">
+          <img src="assets/img/thumbs-down.svg" alt="dislike" />
+        </button>
+        {{ quoteDC.dislikes }}
+      </div>
+    </div>
+    <div class="time-posted text-right">
+      {{ quoteDC.datePosted | date }}
+    </div>
+  </div>
+</div>
