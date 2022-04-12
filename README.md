@@ -8,6 +8,10 @@
 
 Quotly is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
 
+## Screenshot
+
+![Screenshot from 2020-08-27 11-27-41](https://github.com/CodeRichBob/Quotly/blob/master/src/assets/img/quotlyscrnsht.png)
+
 ## Setup/Installation Requirements
 
 - A laptop/ PC with a working internet connection.
