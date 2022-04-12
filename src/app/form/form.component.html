@@ -12,6 +12,7 @@
       required
       placeholder="Your Qoute goes here"
     />
+    
     <div [hidden]="quote.valid || quote.pristine" class="alert alert-warning">
       <p>Quote is required!</p>
     </div>
@@ -46,7 +47,7 @@
       required
       placeholder="Author of the quote"
     />
-    
+
     <div [hidden]="author.valid || author.pristine" class="alert alert-warning">
       <p>
         Author name is required, fill in
