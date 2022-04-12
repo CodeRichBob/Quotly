@@ -10,7 +10,7 @@ Quotly is an application where users can create quotes and have those quotes vot
 
 ## Setup/Installation Requirements
 
-- A laptop/ PC
+- A laptop/ PC with a working internet connection.
 - Clone from Github
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
