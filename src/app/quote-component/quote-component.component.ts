@@ -12,7 +12,7 @@ export class QuoteComponentComponent implements OnInit {
     new Quote('You miss 100% of the shots you do not take.', 'Robert Gitonga', 'Wayne Gretzky'),
     new Quote('Always borrow money from a pessimist. He wont expect it back.', 'Kijana Jeuri', 'Oscar Wilde'),
     new Quote('If you cannot do great things,do small things in a great way.', 'Motivational Speaker', 'Napoleon Hill'),
-    new Quote('It is never too late to be what you might have been.', 'Old Man', 'George Eliot')
+    new Quote('It is never too late to be what you might have been.', 'Old Man', 'George Eliot'),
     new Quote('An obstacle is often a stepping stone.', 'Robert Gitonga', 'William Prescott')
   ]
 
